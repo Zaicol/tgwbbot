@@ -25,6 +25,8 @@ async def get_product_by_artikul(artikul: int) -> dict:
             raise ValueError(f"Error fetching product data: {exc.response.status_code}") from exc
         except KeyError as exc:
             raise ValueError(f"Error fetching product data: {exc}") from exc
+        except IndexError as exc:
+            raise ValueError(f"Не получилось найти продукт: {exc}") from exc
 
 
 class ProductCreate(BaseModel):

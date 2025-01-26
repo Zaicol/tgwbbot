@@ -5,3 +5,4 @@ SQLAlchemy~=2.0.37
 alembic~=1.14.1
 aiogram~=3.17.0
 python-dotenv~=1.0.1
+APScheduler~=4.0.0a5

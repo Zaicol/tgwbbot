@@ -1,15 +1,13 @@
+import logging
 import os
 from datetime import datetime
 
+import httpx
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters.command import CommandStart
-from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
-from aiogram.utils.keyboard import InlineKeyboardBuilder
-from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
-import logging
-import httpx
-
+from aiogram.fsm.state import StatesGroup, State
+from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 from dotenv import load_dotenv
 
 load_dotenv()

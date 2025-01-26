@@ -136,7 +136,7 @@ async def subscribe_to_product_updates(artikul: int):
 
 @app.get("/api/v1/unsubscribe/{artikul}")
 async def unsubscribe_from_product_updates(artikul: int):
-    schedule_id = f"update_product_{artikul}"
+    schedule_id = f"product_update_{artikul}"
 
     try:
         await scheduler.remove_schedule(schedule_id)
